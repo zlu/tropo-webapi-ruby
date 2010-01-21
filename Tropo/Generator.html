@@ -1,0 +1,3412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+<title>Class: Tropo::Generator</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (G)</a> &raquo; 
+    <a title="Tropo" href="../Tropo.html">Tropo</a>
+     &raquo; 
+    <span class="title">Generator</span>
+  
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Namespace List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Tropo::Generator 
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><a title="Tropo::Helpers" href="Helpers.html">Tropo::Helpers</a></dd>
+      
+    
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/tropo-webapi-ruby/tropo-webapi-ruby.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+  
+  
+  
+  
+  <h2>Attribute Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#text_session (instance method)" href="#text_session-instance_method">- (Object) <strong>text_session</strong> </a>
+  
+  </span>
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Set a couple of Booleans to indicate the session type as a convenience.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#voice_session (instance method)" href="#voice_session-instance_method">- (Object) <strong>voice_session</strong> </a>
+  
+  </span>
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Set a couple of Booleans to indicate the session type as a convenience.
+
+</span>
+  
+</li>
+
+    
+  </ul>
+
+
+  <h2>Method Summary</h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="method_missing (class method)" href="#method_missing-class_method">+ (Object) <strong>method_missing</strong>(method_id, *args, &amp;block) </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#ask (instance method)" href="#ask-instance_method">- (String) <strong>ask</strong>(params = {}, &amp;block) </a>
+  
+    (also: #prompt)
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Prompts the user (audio file or text to speech) and optionally waits for a
+response from the user.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#choices (instance method)" href="#choices-instance_method">- (Object) <strong>choices</strong>(params = {}) </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Choices to give the user on input.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#conference (instance method)" href="#conference-instance_method">- (String) <strong>conference</strong>(params = {}, &amp;block) </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Creates a conference or pushes a user to an existing conference.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#hangup (instance method)" href="#hangup-instance_method">- (String) <strong>hangup</strong> </a>
+  
+    (also: #disconnect)
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+This function instructs Tropo to &quot;hang-up&quot; or disconnect the
+current session.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#initialize (instance method)" href="#initialize-instance_method">- (Object) <strong>initialize</strong>(params = nil, &amp;block) </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Initializes the Generator class.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#on (instance method)" href="#on-instance_method">- (Object) <strong>on</strong>(params = {}, &amp;block) </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Sets event handlers to call a REST resource when a particular event occurs.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#parse (instance method)" href="#parse-instance_method">- (Hash) <strong>parse</strong>(json_string) </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Parses the JSON string recieved from Tropo into a Ruby Hash.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#record (instance method)" href="#record-instance_method">- (Object) <strong>record</strong>(params = {}, &amp;block) </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Plays a prompt (audio file or text to speech) and optionally waits for a
+response from the caller that is recorded.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#redirect (instance method)" href="#redirect-instance_method">- (String) <strong>redirect</strong>(params = {}) </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+The redirect function forwards an incoming call to another destination /
+phone number before answering it.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#reject (instance method)" href="#reject-instance_method">- (String) <strong>reject</strong> </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Allows Tropo applications to reject incoming calls before they are
+answered.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#reset (instance method)" href="#reset-instance_method">- (nil) <strong>reset</strong> </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Resets the action hash if one desires to reuse the same Generator object.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#response (instance method)" href="#response-instance_method">- (String) <strong>response</strong> </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Renders the JSON string to be sent to Tropo to execute a set of actions.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#say (instance method)" href="#say-instance_method">- (Object) <strong>say</strong>(value = nil, params = {}) </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Plays a prompt (audio file, text to speech or text for IM/SMS).
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#start_recording (instance method)" href="#start_recording-instance_method">- (String) <strong>start_recording</strong>(params = {}) </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Allows Tropo applications to begin recording the current session.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#stop_recording (instance method)" href="#stop_recording-instance_method">- (String) <strong>stop_recording</strong> </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Stops the recording of the current session after startCallRecording has
+been called.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature"><a title="#transfer (instance method)" href="#transfer-instance_method">- (nil) <strong>transfer</strong>(params = {}, &amp;block) </a>
+  
+  </span>
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Transfers an already answered call to another destination / phone number.
+
+</span>
+  
+</li>
+
+    
+  </ul>
+
+
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <a title="Tropo::Helpers" href="Helpers.html">Tropo::Helpers</a></h3>
+  <p class="inherited"><a title="#build_action" href="Helpers.html#build_action-instance_method">#build_action</a>, <a title="#build_elements" href="Helpers.html#build_elements-instance_method">#build_elements</a>, <a title="#camelize" href="Helpers.html#camelize-instance_method">#camelize</a>, <a title="#create_nested_hash" href="Helpers.html#create_nested_hash-instance_method">#create_nested_hash</a>, <a title="#create_nested_on_hash" href="Helpers.html#create_nested_on_hash-instance_method">#create_nested_on_hash</a>, <a title="#create_on_hash" href="Helpers.html#create_on_hash-instance_method">#create_on_hash</a>, <a title="#decamelize" href="Helpers.html#decamelize-instance_method">#decamelize</a>, <a title="#has_params?" href="Helpers.html#has_params%3F-instance_method">#has_params?</a>, <a title="#render_response" href="Helpers.html#render_response-instance_method">#render_response</a>, <a title="#set_session_type" href="Helpers.html#set_session_type-instance_method">#set_session_type</a>, <a title="#transform_array" href="Helpers.html#transform_array-instance_method">#transform_array</a>, <a title="#transform_hash" href="Helpers.html#transform_hash-instance_method">#transform_hash</a>, <a title="#transform_pair" href="Helpers.html#transform_pair-instance_method">#transform_pair</a></p>
+<div id="constructor_details">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>initialize</strong> </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>initialize</strong>(params) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>initialize</strong>(params, &amp;block) </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Initializes the Generator class
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>Overloads:</h3>
+  <ul class="overload">
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>initialize</strong> </span>
+        
+      </li>
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>initialize</strong>(params) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>pass</span>
+      
+      
+      
+        &mdash;
+        
+in an object that may be accessed inside the block
+
+
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>initialize</strong>(params, &amp;block) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>pass</span>
+      
+      
+      
+        &mdash;
+        
+in an object that may be accessed inside the block
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Block</tt>)</span>
+      
+      
+        <span class='name'>a</span>
+      
+      
+      
+        &mdash;
+        
+block of code to execute (optional)
+
+
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new Generator object
+
+
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+  
+</div>
+
+  <div id="attr_details">
+    <h2>Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="text_session-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="text_session-instance_method">
+  
+    - (<tt>Object</tt>) <strong>text_session</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Set a couple of Booleans to indicate the session type as a convenience
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/tropo-webapi-ruby/tropo-webapi-ruby.rb', line 8</span>
+
+<span class='def def kw'>def</span> <span class='text_session identifier id'>text_session</span>
+  <span class='@text_session ivar id'>@text_session</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="voice_session-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="voice_session-instance_method">
+  
+    - (<tt>Object</tt>) <strong>voice_session</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Set a couple of Booleans to indicate the session type as a convenience
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/tropo-webapi-ruby/tropo-webapi-ruby.rb', line 8</span>
+
+<span class='def def kw'>def</span> <span class='voice_session identifier id'>voice_session</span>
+  <span class='@voice_session ivar id'>@voice_session</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="method_details">
+    <h2>Method Details</h2>
+    
+      <div class="method_details first">
+  <p class="signature first" id="method_missing-class_method">
+  
+    + (<tt>Object</tt>) <strong>method_missing</strong>(method_id, *args, &amp;block) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/tropo-webapi-ruby/tropo-webapi-ruby.rb', line 15</span>
+
+<span class='def def kw'>def</span> <span class='method_missing identifier id'>method_missing</span><span class='lparen token'>(</span><span class='method_id identifier id'>method_id</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='args identifier id'>args</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='block identifier id'>block</span><span class='rparen token'>)</span>
+  <span class='g identifier id'>g</span> <span class='assign token'>=</span> <span class='Generator constant id'>Generator</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='g identifier id'>g</span><span class='dot token'>.</span><span class='send identifier id'>send</span><span class='lparen token'>(</span><span class='method_id identifier id'>method_id</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='args identifier id'>args</span><span class='comma token'>,</span> <span class='bitand op'>&amp;</span><span class='block identifier id'>block</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="ask-instance_method">
+  
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>ask</strong>(params) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>ask</strong>(params, &amp;block) </span>
+    
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names">prompt</span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Prompts the user (audio file or text to speech) and optionally waits for a
+response from the user. If collected, responses may be in the form of DTMF,
+speech recognition or text using a grammar or free-form text.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>Overloads:</h3>
+  <ul class="overload">
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>ask</strong>(params) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        
+the options to create an ask action request with.
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the name to assign to the result when returned to the application, default
+is true
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Integer</tt>)</span>
+          <span class="name">:attempts</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>1</tt>
+            
+          </span>
+          &mdash;
+the number of times to prompt the user for input
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Boolean</tt>)</span>
+          <span class="name">:bargein</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          &mdash;
+allows a user to enter a key to stop the ask action
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Float</tt>)</span>
+          <span class="name">:min_confidence</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>.5</tt>
+            
+          </span>
+          &mdash;
+the minimum confidence by which to accept the response expressed from 0-1,
+as opposed to asking again
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Boolean</tt>)</span>
+          <span class="name">:required</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          &mdash;
+if this is a field that must be completed by the user
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Integer</tt>)</span>
+          <span class="name">:timeout</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>30</tt>
+            
+          </span>
+          &mdash;
+the amount of time, in seconds, to wait for a response before moving on
+
+
+        </tr>
+      
+    </ul>
+  
+
+</div>
+      </li>
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>ask</strong>(params, &amp;block) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        
+the options to create an ask action request with.
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Block</tt>)</span>
+      
+      
+        <span class='name'>takes</span>
+      
+      
+      
+        &mdash;
+        
+a block so that you may trigger actions, such as a say, on a specific event
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the name to assign to the result when returned to the application
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Integer</tt>)</span>
+          <span class="name">:attempts</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>1</tt>
+            
+          </span>
+          &mdash;
+the number of times to prompt the user for input
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Boolean</tt>)</span>
+          <span class="name">:bargein</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          &mdash;
+allows a user to enter a key to stop the ask action
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Float</tt>)</span>
+          <span class="name">:min_confidence</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>.5</tt>
+            
+          </span>
+          &mdash;
+the minimum confidence by which to accept the response expressed from 0-1,
+as opposed to asking again
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Boolean</tt>)</span>
+          <span class="name">:required</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          &mdash;
+if this is a field that must be completed by the user
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Integer</tt>)</span>
+          <span class="name">:timeout</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>30</tt>
+            
+          </span>
+          &mdash;
+the amount of time, in seconds, to wait for a response before moving on
+
+
+        </tr>
+      
+    </ul>
+  
+    
+    
+
+</div>
+      </li>
+    
+  </ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the JSON string to be passed back to Tropo or nil if the method has been
+called from inside a block
+
+
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="choices-instance_method">
+  
+    - (<tt>Object</tt>) <strong>choices</strong>(params = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Choices to give the user on input
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        
+the options used to construct the grammar for the user
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the name to assign to the result when returned to the app
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:mode</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>ANY</tt>
+            
+          </span>
+          &mdash;
+the mode to use when asking the user [DTMF, SPEECH or ANY]
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:term_char</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the user may enter a keypad entry to stop the request
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:type</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>simple/grammar</tt>
+            
+          </span>
+          &mdash;
+the type of grammar to use
+
+
+        </tr>
+      
+    </ul>
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/tropo-webapi-ruby/tropo-webapi-ruby.rb', line 89</span>
+
+<span class='def def kw'>def</span> <span class='choices identifier id'>choices</span><span class='lparen token'>(</span><span class='params identifier id'>params</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='hash identifier id'>hash</span> <span class='assign token'>=</span> <span class='build_action identifier id'>build_action</span><span class='lparen token'>(</span><span class='string val'>'choices'</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+  
+  <span class='if if kw'>if</span> <span class='@nested_hash ivar id'>@nested_hash</span>
+    <span class='@nested_hash ivar id'>@nested_hash</span><span class='lbrack token'>[</span><span class='@nested_name ivar id'>@nested_name</span><span class='dot token'>.</span><span class='to_sym identifier id'>to_sym</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='merge! fid id'>merge!</span><span class='lparen token'>(</span><span class='hash identifier id'>hash</span><span class='rparen token'>)</span>
+  <span class='else else kw'>else</span>
+    <span class='@response ivar id'>@response</span><span class='lbrack token'>[</span><span class='symbol val'>:tropo</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='hash identifier id'>hash</span>
+    <span class='render_response identifier id'>render_response</span> <span class='if if_mod kw'>if</span> <span class='@building ivar id'>@building</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="conference-instance_method">
+  
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>conference</strong>(params) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>conference</strong>(params, &amp;block) </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates a conference or pushes a user to an existing conference
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>Overloads:</h3>
+  <ul class="overload">
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>conference</strong>(params) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        
+the options to create a message with.
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the name to assign to the conference room and to identify events back to
+the application
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="name">:id</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the number to assign to the conference room
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Boolean</tt>)</span>
+          <span class="name">:mute</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          &mdash;
+whether to mute this caller in the conference
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Integer</tt>)</span>
+          <span class="name">:max_time</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the maximum time, in seconds, to allow this user to stay in conference
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Integer</tt>)</span>
+          <span class="name">:send_tones</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+whether to send the DTMF a user may enter to the audio of the conference
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:exit_tone</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+whether to play a beep when this user exits a conference
+
+
+        </tr>
+      
+    </ul>
+  
+
+</div>
+      </li>
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>conference</strong>(params, &amp;block) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        
+the options to create a message with.
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Block</tt>)</span>
+      
+      
+        <span class='name'>takes</span>
+      
+      
+      
+        &mdash;
+        
+a block so that you may trigger actions, such as a say, on a specific event
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the name to assign to the conference room and to identify events back to
+the application
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="name">:id</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the number to assign to the conference room
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Boolean</tt>)</span>
+          <span class="name">:mute</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>false</tt>
+            
+          </span>
+          &mdash;
+whether to mute this caller in the conference
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Integer</tt>)</span>
+          <span class="name">:max_time</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the maximum time, in seconds, to allow this user to stay in conference
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Integer</tt>)</span>
+          <span class="name">:send_tones</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+whether to send the DTMF a user may enter to the audio of the conference
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:exit_tone</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+whether to play a beep when this user exits a conference
+
+
+        </tr>
+      
+    </ul>
+  
+    
+    
+
+</div>
+      </li>
+    
+  </ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the JSON string to be passed back to Tropo or nil if the method has been
+called from inside a block
+
+
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="hangup-instance_method">
+  
+    - (<tt>String</tt>) <strong>hangup</strong> 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names">disconnect</span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+This function instructs Tropo to &quot;hang-up&quot; or disconnect the
+current session.
+</p>
+<p>
+May trigger these events:
+</p>
+<pre class="code">
+  <span class='minus op'>-</span> <span class='hangup identifier id'>hangup</span>
+  <span class='minus op'>-</span> <span class='error identifier id'>error</span>
+</pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+returns the JSON string to hangup/stop the current session or nil if the
+method has been called from inside a block
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+143
+144
+145
+146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/tropo-webapi-ruby/tropo-webapi-ruby.rb', line 143</span>
+
+<span class='def def kw'>def</span> <span class='hangup identifier id'>hangup</span>
+  <span class='@response ivar id'>@response</span><span class='lbrack token'>[</span><span class='symbol val'>:tropo</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='lbrace token'>{</span> <span class='symbol val'>:hangup</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span> <span class='rbrace token'>}</span>
+  <span class='render_response identifier id'>render_response</span> <span class='if if_mod kw'>if</span> <span class='@building ivar id'>@building</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span> 
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="on-instance_method">
+  
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>on</strong>(params) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>on</strong>(params, &amp;block) </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Sets event handlers to call a REST resource when a particular event occurs
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>Overloads:</h3>
+  <ul class="overload">
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>on</strong>(params) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        
+the options to create a message with.
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:event</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the event name that should trigger the callback
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:next</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the resource to send the callback to, such as &#8217;/error.json&#8217;
+
+
+        </tr>
+      
+    </ul>
+  
+
+</div>
+      </li>
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>on</strong>(params, &amp;block) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        
+the options to create a message with.
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Block</tt>)</span>
+      
+      
+        <span class='name'>takes</span>
+      
+      
+      
+        &mdash;
+        
+a block so that you may trigger actions, such as a say, on a specific event
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:event</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the event name that should trigger the callback
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:next</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the resource to send the callback to, such as &#8217;/error.json&#8217;
+
+
+        </tr>
+      
+    </ul>
+  
+    
+    
+
+</div>
+      </li>
+    
+  </ul>
+
+  
+    
+    
+    
+    
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="parse-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>parse</strong>(json_string) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Parses the JSON string recieved from Tropo into a Ruby Hash
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>a</span>
+      
+      
+      
+        &mdash;
+        
+JSON string
+
+
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a Hash representing the response from Tropo
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/tropo-webapi-ruby/tropo-webapi-ruby.rb', line 188</span>
+
+<span class='def def kw'>def</span> <span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='json_string identifier id'>json_string</span><span class='rparen token'>)</span>
+  <span class='response identifier id'>response</span> <span class='assign token'>=</span> <span class='JSON constant id'>JSON</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span> <span class='json_string identifier id'>json_string</span>
+  
+  <span class='comment val'># Check to see what type of response we are working with</span>
+  <span class='if if kw'>if</span> <span class='response identifier id'>response</span><span class='lbrack token'>[</span><span class='string val'>'session'</span><span class='rbrack token'>]</span>
+    <span class='transformed_response identifier id'>transformed_response</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='symbol val'>:session</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span>
+    
+    <span class='response identifier id'>response</span><span class='lbrack token'>[</span><span class='string val'>'session'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='each_pair identifier id'>each_pair</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='key identifier id'>key</span><span class='comma token'>,</span> <span class='value identifier id'>value</span><span class='bitor op'>|</span>
+      <span class='value identifier id'>value</span> <span class='assign token'>=</span> <span class='transform_hash identifier id'>transform_hash</span> <span class='value identifier id'>value</span> <span class='if if_mod kw'>if</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='kind_of? fid id'>kind_of?</span> <span class='Hash constant id'>Hash</span>
+      <span class='transformed_response identifier id'>transformed_response</span><span class='lbrack token'>[</span><span class='symbol val'>:session</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='merge! fid id'>merge!</span><span class='lparen token'>(</span><span class='transform_pair identifier id'>transform_pair</span><span class='lparen token'>(</span><span class='key identifier id'>key</span><span class='comma token'>,</span> <span class='value identifier id'>value</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+    
+  <span class='elsif elsif kw'>elsif</span> <span class='response identifier id'>response</span><span class='lbrack token'>[</span><span class='string val'>'result'</span><span class='rbrack token'>]</span>
+    <span class='transformed_response identifier id'>transformed_response</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='symbol val'>:result</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='symbol val'>:actions</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span> <span class='rbrace token'>}</span>
+
+    <span class='response identifier id'>response</span><span class='lbrack token'>[</span><span class='string val'>'result'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='each_pair identifier id'>each_pair</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='key identifier id'>key</span><span class='comma token'>,</span> <span class='value identifier id'>value</span><span class='bitor op'>|</span>
+      <span class='value identifier id'>value</span> <span class='assign token'>=</span> <span class='transform_hash identifier id'>transform_hash</span> <span class='value identifier id'>value</span> <span class='if if_mod kw'>if</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='kind_of? fid id'>kind_of?</span> <span class='Hash constant id'>Hash</span>
+      <span class='value identifier id'>value</span> <span class='assign token'>=</span> <span class='transform_array identifier id'>transform_array</span> <span class='value identifier id'>value</span>  <span class='if if_mod kw'>if</span> <span class='value identifier id'>value</span><span class='dot token'>.</span><span class='kind_of? fid id'>kind_of?</span> <span class='Array constant id'>Array</span>
+      <span class='transformed_response identifier id'>transformed_response</span><span class='lbrack token'>[</span><span class='symbol val'>:result</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='merge! fid id'>merge!</span><span class='lparen token'>(</span><span class='transform_pair identifier id'>transform_pair</span><span class='lparen token'>(</span><span class='key identifier id'>key</span><span class='comma token'>,</span> <span class='value identifier id'>value</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  
+  <span class='transformed_response identifier id'>transformed_response</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="record-instance_method">
+  
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>record</strong>(params) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>record</strong>(params, &amp;block) </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Plays a prompt (audio file or text to speech) and optionally waits for a
+response from the caller that is recorded. If collected, responses may be
+in the form of DTMF or speech recognition using a simple grammar format
+defined below. The record funtion is really an alias of the prompt
+function, but one which forces the record option to true regardless of how
+it is (or is not) initially set. At the conclusion of the recording, the
+audio file may be automatically sent to an external server via FTP or an
+HTTP POST/Multipart Form. If specified, the audio file may also be
+transcribed and the text returned to you via an email address or HTTP
+POST/Multipart Form.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>Overloads:</h3>
+  <ul class="overload">
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>record</strong>(params) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        
+the options to create a message with.
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the event name that should trigger the callback
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:url</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+a valid URI, an HTTP, FTP or email address to POST the recording file to
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:format</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>audio/wav</tt>
+            
+          </span>
+          &mdash;
+the audio format to record in, either a wav or mp3
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:username</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+if posting to FTP, the username for the FTP server
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:password</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+if posting to FTP, the password for the FTP server
+
+
+        </tr>
+      
+    </ul>
+  
+
+</div>
+      </li>
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>record</strong>(params, &amp;block) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        
+the options to create a message with.
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Block</tt>)</span>
+      
+      
+        <span class='name'>takes</span>
+      
+      
+      
+        &mdash;
+        
+a block so that you may trigger actions, such as a say, on a specific event
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the event name that should trigger the callback
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:url</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+a valid URI, an HTTP, FTP or email address to POST the recording file to
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:format</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>audio/wav</tt>
+            
+          </span>
+          &mdash;
+the audio format to record in, either a wav or mp3
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:username</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+if posting to FTP, the username for the FTP server
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:password</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+if posting to FTP, the password for the FTP server
+
+
+        </tr>
+      
+    </ul>
+  
+    
+    
+
+</div>
+      </li>
+    
+  </ul>
+
+  
+    
+    
+    
+    
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="redirect-instance_method">
+  
+    - (<tt>String</tt>) <strong>redirect</strong>(params = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The redirect function forwards an incoming call to another destination /
+phone number before answering it. The redirect function must be called
+before answer is called; redirect expects that a call be in the ringing or
+answering state. Use transfer when working with active answered calls.
+</p>
+<pre class="code">
+ <span class='tel identifier id'>tel</span><span class='colon op'>:</span> <span class='classic identifier id'>classic</span> <span class='phone identifier id'>phone</span> <span class='number identifier id'>number</span> <span class='lparen token'>(</span><span class='See constant id'>See</span> <span class='RFC constant id'>RFC</span> <span class='integer val'>2896</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='must identifier id'>must</span> <span class='be identifier id'>be</span> <span class='proceeded identifier id'>proceeded</span> <span class='by identifier id'>by</span> <span class='a identifier id'>a</span> <span class='plus op'>+</span> <span class='and and kw'>and</span> <span class='the identifier id'>the</span> <span class='country identifier id'>country</span> <span class='code identifier id'>code</span> <span class='lparen token'>(</span><span class='ie identifier id'>ie</span> <span class='minus op'>-</span> <span class='integer val'>+14155551212</span> <span class='for for kw'>for</span> <span class='a identifier id'>a</span> <span class='US constant id'>US</span> <span class='comment val'>#)</span>
+ <span class='sip identifier id'>sip</span><span class='colon op'>:</span> <span class='Session constant id'>Session</span> <span class='Initiation constant id'>Initiation</span> <span class='Protocol constant id'>Protocol</span> <span class='lparen token'>(</span><span class='SIP constant id'>SIP</span><span class='rparen token'>)</span> <span class='address identifier id'>address</span>
+</pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        
+the options to create a message with.
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>required</tt>, <tt>String</tt>)</span>
+          <span class="name">:to</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+where to redirect the session to
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:from</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+set the from id for the session when redirecting
+
+
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the JSON string to redirect the current session or nil if the method has
+been called from inside a block
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+262
+263
+264
+265
+266</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/tropo-webapi-ruby/tropo-webapi-ruby.rb', line 262</span>
+
+<span class='def def kw'>def</span> <span class='redirect identifier id'>redirect</span><span class='lparen token'>(</span><span class='params identifier id'>params</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='hash identifier id'>hash</span> <span class='assign token'>=</span> <span class='build_action identifier id'>build_action</span><span class='lparen token'>(</span><span class='string val'>'redirect'</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+  <span class='@response ivar id'>@response</span><span class='lbrack token'>[</span><span class='symbol val'>:tropo</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='hash identifier id'>hash</span>
+  <span class='render_response identifier id'>render_response</span> <span class='if if_mod kw'>if</span> <span class='@building ivar id'>@building</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="reject-instance_method">
+  
+    - (<tt>String</tt>) <strong>reject</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Allows Tropo applications to reject incoming calls before they are
+answered. For example, an application could inspect the callerID variable
+to determine if the caller is known, and then use the reject call
+accordingly.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the JSON string to reject the current session or nil if the method has been
+called from inside a block
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+275
+276
+277
+278</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/tropo-webapi-ruby/tropo-webapi-ruby.rb', line 275</span>
+
+<span class='def def kw'>def</span> <span class='reject identifier id'>reject</span>
+  <span class='@response ivar id'>@response</span><span class='lbrack token'>[</span><span class='symbol val'>:tropo</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='lbrace token'>{</span> <span class='symbol val'>:reject</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span> <span class='rbrace token'>}</span>
+  <span class='render_response identifier id'>render_response</span> <span class='if if_mod kw'>if</span> <span class='@building ivar id'>@building</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="reset-instance_method">
+  
+    - (<tt>nil</tt>) <strong>reset</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Resets the action hash if one desires to reuse the same Generator object
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>nil</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+292
+293
+294
+295
+296</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/tropo-webapi-ruby/tropo-webapi-ruby.rb', line 292</span>
+
+<span class='def def kw'>def</span> <span class='reset identifier id'>reset</span>
+  <span class='@response ivar id'>@response</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span> <span class='symbol val'>:tropo</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='Array constant id'>Array</span><span class='dot token'>.</span><span class='new identifier id'>new</span> <span class='rbrace token'>}</span>
+  <span class='@voice_session ivar id'>@voice_session</span> <span class='assign token'>=</span> <span class='false false kw'>false</span>
+  <span class='@text_session ivar id'>@text_session</span> <span class='assign token'>=</span> <span class='false false kw'>false</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="response-instance_method">
+  
+    - (<tt>String</tt>) <strong>response</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Renders the JSON string to be sent to Tropo to execute a set of actions
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the JSON string to be sent to the Tropo Remote API
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+284
+285
+286</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/tropo-webapi-ruby/tropo-webapi-ruby.rb', line 284</span>
+
+<span class='def def kw'>def</span> <span class='response identifier id'>response</span>
+  <span class='@response ivar id'>@response</span><span class='dot token'>.</span><span class='to_json identifier id'>to_json</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="say-instance_method">
+  
+    
+      <span class="overload">- (<tt>String</tt>) <strong>say</strong>(params) </span>
+    
+      <span class="overload">- (<tt>String</tt>) <strong>say</strong>(value, params) </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Plays a prompt (audio file, text to speech or text for IM/SMS). There is no
+ability to wait for a response from a user. An audio file used for playback
+may be in one of the following two formats:
+</p>
+<pre class="code">
+ <span class='Wav constant id'>Wav</span> <span class='integer val'>8</span><span class='bit identifier id'>bit</span> <span class='integer val'>8</span><span class='khz identifier id'>khz</span> <span class='Ulaw constant id'>Ulaw</span>
+ <span class='MP3 constant id'>MP3</span>
+</pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>Overloads:</h3>
+  <ul class="overload">
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>String</tt>) <strong>say</strong>(params) </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+The JSON string to be passed back to Tropo or nil if the method has been
+called from inside a block
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        
+the options to create a message with.
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:value</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the text or audio to be spoken or played back to the user
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="name">:event</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+assigns a callback when a particular event occurs
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="name">:as</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+instructs the engine on how to handle the grammar
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="name">:format</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+instructs the engine on how to handle the grammar
+
+
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the JSON string to be passed back to Tropo or nil if the method has been
+called from inside a block
+
+
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>String</tt>) <strong>say</strong>(value, params) </span>
+        <div class="docstring">
+  <div class="discussion">
+    <p>
+The JSON string to be passed back to Tropo or nil if the method has been
+called from inside a block
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>the</span>
+      
+      
+      
+        &mdash;
+        
+text or audio to be spoken or played back to the user
+
+
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        
+the options to create a message with.
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="name">:event</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+assigns a callback when a particular event occurs
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>Integer</tt>)</span>
+          <span class="name">:as</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+instructs the engine on how to handle the grammar
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>Boolean</tt>)</span>
+          <span class="name">:format</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+instructs the engine on how to handle the grammar
+
+
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the JSON string to be passed back to Tropo or nil if the method has been
+called from inside a block
+
+
+      
+    </li>
+  
+</ul>
+
+</div>
+      </li>
+    
+  </ul>
+
+</div>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="start_recording-instance_method">
+  
+    - (<tt>String</tt>) <strong>start_recording</strong>(params = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Allows Tropo applications to begin recording the current session. The
+resulting recording may then be sent via FTP or an HTTP POST/Multipart
+Form.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+        <em class="default">(defaults to: <tt>{}</tt>)</em>
+      
+      
+        &mdash;
+        
+the options to create a message with.
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:url</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+a valid URI, an HTTP, FTP or email address to POST the recording file to
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:format</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>audio/wav</tt>
+            
+          </span>
+          &mdash;
+the audio format to record in, either a wav or mp3
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:username</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+if posting to FTP, the username for the FTP server
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:password</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+if posting to FTP, the password for the FTP server
+
+
+        </tr>
+      
+    </ul>
+  
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+returns the JSON string to start the recording of a session or nil if the
+method has been called from inside a block
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/tropo-webapi-ruby/tropo-webapi-ruby.rb', line 368</span>
+
+<span class='def def kw'>def</span> <span class='start_recording identifier id'>start_recording</span><span class='lparen token'>(</span><span class='params identifier id'>params</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='if if kw'>if</span> <span class='block_given? fid id'>block_given?</span>
+    <span class='create_nested_hash identifier id'>create_nested_hash</span><span class='lparen token'>(</span><span class='string val'>'start_recording'</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+    <span class='instance_exec identifier id'>instance_exec</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='block identifier id'>block</span><span class='rparen token'>)</span>
+    <span class='@response ivar id'>@response</span><span class='lbrack token'>[</span><span class='symbol val'>:tropo</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='@nested_hash ivar id'>@nested_hash</span>
+  <span class='else else kw'>else</span>
+    <span class='hash identifier id'>hash</span> <span class='assign token'>=</span> <span class='build_action identifier id'>build_action</span><span class='lparen token'>(</span><span class='string val'>'start_recording'</span><span class='comma token'>,</span> <span class='params identifier id'>params</span><span class='rparen token'>)</span>
+    <span class='@response ivar id'>@response</span><span class='lbrack token'>[</span><span class='symbol val'>:tropo</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='hash identifier id'>hash</span>
+  <span class='end end kw'>end</span>
+  <span class='render_response identifier id'>render_response</span> <span class='if if_mod kw'>if</span> <span class='@building ivar id'>@building</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="stop_recording-instance_method">
+  
+    - (<tt>String</tt>) <strong>stop_recording</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Stops the recording of the current session after startCallRecording has
+been called
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+returns the JSON string to stop the recording of a session or nil if the
+method has been called from inside a block
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+385
+386
+387
+388</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/tropo-webapi-ruby/tropo-webapi-ruby.rb', line 385</span>
+
+<span class='def def kw'>def</span> <span class='stop_recording identifier id'>stop_recording</span>
+  <span class='@response ivar id'>@response</span><span class='lbrack token'>[</span><span class='symbol val'>:tropo</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='lbrace token'>{</span> <span class='symbol val'>:stopRecording</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='nil nil kw'>nil</span> <span class='rbrace token'>}</span>
+  <span class='render_response identifier id'>render_response</span> <span class='if if_mod kw'>if</span> <span class='@building ivar id'>@building</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="transfer-instance_method">
+  
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>transfer</strong>(params) </span>
+    
+      <span class="overload">- (<tt>Object</tt>) <strong>transfer</strong>(params, &amp;block) </span>
+    
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Transfers an already answered call to another destination / phone number.
+Call may be transferred to another phone number or SIP address, which is
+set through the &quot;to&quot; parameter and is in URL format. Supported
+formats include:
+</p>
+<pre class="code">
+ <span class='tel identifier id'>tel</span><span class='colon op'>:</span> <span class='classic identifier id'>classic</span> <span class='phone identifier id'>phone</span> <span class='number identifier id'>number</span> <span class='lparen token'>(</span><span class='See constant id'>See</span> <span class='RFC constant id'>RFC</span> <span class='integer val'>2896</span><span class='rparen token'>)</span><span class='comma token'>,</span> <span class='must identifier id'>must</span> <span class='be identifier id'>be</span> <span class='proceeded identifier id'>proceeded</span> <span class='by identifier id'>by</span> <span class='a identifier id'>a</span> <span class='plus op'>+</span> <span class='and and kw'>and</span> <span class='the identifier id'>the</span> <span class='country identifier id'>country</span> <span class='code identifier id'>code</span> <span class='lparen token'>(</span><span class='ie identifier id'>ie</span> <span class='minus op'>-</span> <span class='integer val'>+14155551212</span> <span class='for for kw'>for</span> <span class='a identifier id'>a</span> <span class='US constant id'>US</span> <span class='comment val'>#)</span>
+ <span class='sip identifier id'>sip</span><span class='colon op'>:</span> <span class='SIP constant id'>SIP</span> <span class='protocol identifier id'>protocol</span> <span class='address identifier id'>address</span>
+</pre>
+<p>
+When this method is called the following occurs:
+</p>
+<pre class="code">
+ <span class='The constant id'>The</span> <span class='audio identifier id'>audio</span> <span class='file identifier id'>file</span> <span class='specified identifier id'>specified</span> <span class='in in kw'>in</span> <span class='playvalue identifier id'>playvalue</span> <span class='is identifier id'>is</span> <span class='played identifier id'>played</span> <span class='to identifier id'>to</span> <span class='the identifier id'>the</span> <span class='existing identifier id'>existing</span> <span class='call identifier id'>call</span><span class='dot token'>.</span> <span class='This constant id'>This</span> <span class='could identifier id'>could</span> <span class='be identifier id'>be</span> <span class='string val'>&quot;hold music&quot;</span><span class='comma token'>,</span> <span class='a identifier id'>a</span> <span class='ring identifier id'>ring</span><span class='minus op'>-</span><span class='back identifier id'>back</span> <span class='sound identifier id'>sound</span><span class='comma token'>,</span> <span class='etc identifier id'>etc</span><span class='dot token'>.</span> <span class='The constant id'>The</span> <span class='audio identifier id'>audio</span> <span class='file identifier id'>file</span> <span class='is identifier id'>is</span> <span class='played identifier id'>played</span> <span class='up identifier id'>up</span> <span class='to identifier id'>to</span> <span class='playrepeat identifier id'>playrepeat</span> <span class='times identifier id'>times</span><span class='dot token'>.</span>
+ <span class='While constant id'>While</span> <span class='audio identifier id'>audio</span> <span class='is identifier id'>is</span> <span class='playing identifier id'>playing</span><span class='comma token'>,</span> <span class='a identifier id'>a</span> <span class='new identifier id'>new</span> <span class='call identifier id'>call</span> <span class='is identifier id'>is</span> <span class='initiated identifier id'>initiated</span> <span class='to identifier id'>to</span> <span class='the identifier id'>the</span> <span class='specified identifier id'>specified</span> <span class='string val'>&quot;to&quot;</span> <span class='address identifier id'>address</span> <span class='using identifier id'>using</span> <span class='the identifier id'>the</span> <span class='callerID identifier id'>callerID</span> <span class='specified identifier id'>specified</span><span class='dot token'>.</span>
+ <span class='If constant id'>If</span> <span class='answerOnMedia identifier id'>answerOnMedia</span> <span class='is identifier id'>is</span> <span class='true true kw'>true</span><span class='comma token'>,</span> <span class='the identifier id'>the</span> <span class='audio identifier id'>audio</span> <span class='from identifier id'>from</span> <span class='the identifier id'>the</span> <span class='new identifier id'>new</span> <span class='call identifier id'>call</span> <span class='is identifier id'>is</span> <span class='connected identifier id'>connected</span> <span class='to identifier id'>to</span> <span class='the identifier id'>the</span> <span class='existing identifier id'>existing</span> <span class='call identifier id'>call</span> <span class='immediately identifier id'>immediately</span><span class='dot token'>.</span>
+ <span class='The constant id'>The</span> <span class='system identifier id'>system</span> <span class='waits identifier id'>waits</span> <span class='for for kw'>for</span> <span class='an identifier id'>an</span> <span class='answer identifier id'>answer</span> <span class='or or kw'>or</span> <span class='other identifier id'>other</span> <span class='event identifier id'>event</span> <span class='from identifier id'>from</span> <span class='the identifier id'>the</span> <span class='new identifier id'>new</span> <span class='call identifier id'>call</span> <span class='up identifier id'>up</span> <span class='to identifier id'>to</span> <span class='the identifier id'>the</span> <span class='timeout identifier id'>timeout</span><span class='dot token'>.</span>
+ <span class='If constant id'>If</span> <span class='the identifier id'>the</span> <span class='call identifier id'>call</span> <span class='successfully identifier id'>successfully</span> <span class='completes identifier id'>completes</span> <span class='within identifier id'>within</span> <span class='the identifier id'>the</span> <span class='timeout identifier id'>timeout</span><span class='comma token'>,</span> <span class='the identifier id'>the</span> <span class='existing identifier id'>existing</span> <span class='call identifier id'>call</span> <span class='and and kw'>and</span> <span class='new identifier id'>new</span> <span class='call identifier id'>call</span> <span class='will identifier id'>will</span> <span class='be identifier id'>be</span> <span class='connected identifier id'>connected</span><span class='comma token'>,</span> <span class='onSuccess identifier id'>onSuccess</span> <span class='will identifier id'>will</span> <span class='be identifier id'>be</span> <span class='called identifier id'>called</span><span class='comma token'>,</span> <span class='and and kw'>and</span> <span class='the identifier id'>the</span> <span class='transfer identifier id'>transfer</span> <span class='call identifier id'>call</span> <span class='will identifier id'>will</span> <span class='return return kw'>return</span> <span class='a identifier id'>a</span> <span class='success identifier id'>success</span> <span class='event identifier id'>event</span><span class='dot token'>.</span>
+ <span class='If constant id'>If</span> <span class='the identifier id'>the</span> <span class='call identifier id'>call</span> <span class='fails identifier id'>fails</span> <span class='before identifier id'>before</span> <span class='the identifier id'>the</span> <span class='timeout identifier id'>timeout</span><span class='comma token'>,</span> <span class='onCallFailure identifier id'>onCallFailure</span> <span class='will identifier id'>will</span> <span class='be identifier id'>be</span> <span class='called identifier id'>called</span> <span class='and and kw'>and</span> <span class='the identifier id'>the</span> <span class='method identifier id'>method</span> <span class='will identifier id'>will</span> <span class='return return kw'>return</span> <span class='an identifier id'>an</span> <span class='onCallFailure identifier id'>onCallFailure</span> <span class='event identifier id'>event</span><span class='dot token'>.</span>
+ <span class='If constant id'>If</span> <span class='the identifier id'>the</span> <span class='call identifier id'>call</span> <span class='fails identifier id'>fails</span> <span class='due identifier id'>due</span> <span class='to identifier id'>to</span> <span class='the identifier id'>the</span> <span class='timeout identifier id'>timeout</span> <span class='elapsing identifier id'>elapsing</span><span class='comma token'>,</span> <span class='onTimeout identifier id'>onTimeout</span> <span class='will identifier id'>will</span> <span class='be identifier id'>be</span> <span class='called identifier id'>called</span> <span class='and and kw'>and</span> <span class='the identifier id'>the</span> <span class='method identifier id'>method</span> <span class='will identifier id'>will</span> <span class='return return kw'>return</span> <span class='a identifier id'>a</span> <span class='timeout identifier id'>timeout</span> <span class='event identifier id'>event</span>
+</pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <h3>Overloads:</h3>
+  <ul class="overload">
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>transfer</strong>(params) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        
+the options to create a transfer action request with
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the name to assign to the result when returned to the application, default
+is true
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Boolean</tt>)</span>
+          <span class="name">:answer_on_media</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+???
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Integer</tt>)</span>
+          <span class="name">:answer_timeout</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the amount of time to ring the far side before giving up and going to the
+next step
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Boolean</tt>)</span>
+          <span class="name">:required</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          &mdash;
+???
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>required</tt>, <tt>String</tt>)</span>
+          <span class="name">:to</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+where to redirect the session to
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:from</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+set the from id for the session when redirecting
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Integer</tt>)</span>
+          <span class="name">:ring_repeat</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+???
+
+
+        </tr>
+      
+    </ul>
+  
+
+</div>
+      </li>
+    
+      <li class="overload_item">
+        <span class="signature">- (<tt>Object</tt>) <strong>transfer</strong>(params, &amp;block) </span>
+        <div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+        <span class='name'>params</span>
+      
+      
+      
+        &mdash;
+        
+the options to create a transfer action request with
+
+
+      
+    </li>
+  
+</ul>
+
+  
+    
+    
+    <h3>Options Hash (<tt>params</tt>):</h3>
+    <ul class="option">
+      
+        <li>
+          <span class="type">(<tt>String</tt>)</span>
+          <span class="name">:name</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the name to assign to the result when returned to the application, default
+is true
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Boolean</tt>)</span>
+          <span class="name">:answer_on_media</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+???
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Integer</tt>)</span>
+          <span class="name">:answer_timeout</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+the amount of time to ring the far side before giving up and going to the
+next step
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Boolean</tt>)</span>
+          <span class="name">:required</span>
+          <span class="default">
+            
+              &mdash; default:
+              <tt>true</tt>
+            
+          </span>
+          &mdash;
+???
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>required</tt>, <tt>String</tt>)</span>
+          <span class="name">:to</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+where to redirect the session to
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>String</tt>)</span>
+          <span class="name">:from</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+set the from id for the session when redirecting
+
+
+        </tr>
+      
+        <li>
+          <span class="type">(<tt>optional</tt>, <tt>Integer</tt>)</span>
+          <span class="name">:ring_repeat</span>
+          <span class="default">
+            
+              <span class="na">N/A</span>
+            
+          </span>
+          &mdash;
+???
+
+
+        </tr>
+      
+    </ul>
+  
+    
+    
+
+</div>
+      </li>
+    
+  </ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>nil</tt>, <tt>String</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Thu Jan 21 10:38:35 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.4.0 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>
