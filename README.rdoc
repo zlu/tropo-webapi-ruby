@@ -191,7 +191,7 @@ May be found by checking out the project from Github, and then looking in $PROJE
 
 * API Documentation:
 
-http://voxeo.github.com/tropo-webapi-ruby/
+http://voxeo.github.com/tropo-webapi-ruby
 
 * Tropo Web API Documentation
 
