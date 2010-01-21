@@ -187,6 +187,16 @@ Using the great RESTful Web Services framework Sinatra for Ruby.
 
 May be found by checking out the project from Github, and then looking in $PROJECT_HOME/examples and $PROJECT_HOME/spec/tropo-webapi-ruby_spec.rb.
 
+=== Documentation
+
+* API Documentation:
+
+http://voxeo.github.com/tropo-webapi-ruby/
+
+* Tropo Web API Documentation
+
+http://docs.tropo.com/webapi/2.0/home.htm
+
 == Copyright
 
 Copyright (c) 2010 Voxeo, Corporation. See LICENSE for details.
