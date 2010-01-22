@@ -1,6 +1,6 @@
 = Tropo Web API Ruby Library
 
-A Ruby library for interaction with the Tropo Web API using JSON.
+A Ruby library for interaction with the Tropo Web API (http://tropo.com) using JSON.
 
 == Tropo Web API Overview
 
