@@ -72,8 +72,9 @@ module Tropo
       # @param [String] the string to be camelized
       # @return [String] the Ruby string camelized
       def camelize(ruby_string)
-        split_string = ruby_string.split('_')
-        split_string[0] + split_string[1].capitalize
+#        split_string = ruby_string.split('_')
+#        split_string[0] + split_string[1].capitalize
+        ruby_string.gsub(/(^|_)(.)/) { $2.upcase }
       end
     
       ##
@@ -179,7 +180,7 @@ module Tropo
       end
 
       ##
-      # Transforms a hash into the appropriatey formatted hash with no camelcase and keys as symbols
+      # Transforms a hash into the appropriately formatted hash with no camel case and keys as symbols
       #
       # @param [Hash] Hash to be transformed
       # @return [Hash] the transformed hash

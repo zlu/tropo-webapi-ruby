@@ -93,12 +93,13 @@ describe "Tropo" do
   
   # Conference action tests
   it "should generate a complete 'conference' JSON document" do
-    response = Tropo::Generator.conference({ :name       => 'foo', 
-                                             :id         => '1234', 
-                                             :mute       => false,
-                                             :send_tones => false,
-                                             :exit_tone  => '#' })
-    JSON.parse(response).should == {"tropo"=>[{"conference"=>{"name"=>"foo", "mute"=>false, "sendTones"=>false, "id"=>"1234", "exitTone"=>"#"}}]}
+    valid_hash = { :name       => 'foo',
+                   :id         => '1234',
+                   :mute       => false,
+                   :send_tones => false,
+                   :exit_tone  => '#' }
+    response = Tropo::Generator.conference(valid_hash)
+    JSON.parse(response).should == {"tropo"=>[{"conference"=>{"name"=>"foo", "mute"=>false, "SendTones"=>false, "id"=>"1234", "ExitTone"=>"#"}}]}
   end
   
   it "should generate a complete 'conference' JSON document when a block is passed" do
@@ -110,7 +111,7 @@ describe "Tropo" do
                                                on(:event => 'join') { say :value => 'Welcome to the conference' }
                                                on(:event => 'leave') { say :value => 'Someone has left the conference' }
                                              end
-    JSON.parse(response).should == {"tropo"=>[{"conference"=>{"name"=>"foo", "mute"=>false, "id"=>"1234", "exitTone"=>"#", "sendTones"=>false, "on"=>[{"say"=>[{"value"=>"Welcome to the conference"}], "event"=>"join"}, {"say"=>[{"value"=>"Someone has left the conference"}], "event"=>"leave"}]}}]}
+    JSON.parse(response).should == {"tropo"=>[{"conference"=>{"name"=>"foo", "mute"=>false, "id"=>"1234", "ExitTone"=>"#", "SendTones"=>false, "on"=>[{"say"=>[{"value"=>"Welcome to the conference"}], "event"=>"join"}, {"say"=>[{"value"=>"Someone has left the conference"}], "event"=>"leave"}]}}]}
   end
   
   it "should generate an error if an 'conference' is passed without a 'name' parameter" do
@@ -169,7 +170,7 @@ describe "Tropo" do
                                          :beep       => true,
                                          :send_tones => false,
                                          :exit_tone  => '#' })
-    JSON.parse(response).should == {"tropo"=>[{"record"=>{"name"=>"foo", "beep"=>true, "url"=>"http://sendme.com/tropo", "exitTone"=>"#", "sendTones"=>false}}]}
+    JSON.parse(response).should == {"tropo"=>[{"record"=>{"name"=>"foo", "beep"=>true, "url"=>"http://sendme.com/tropo", "ExitTone"=>"#", "SendTones"=>false}}]}
   end
   
   it "should generate a complete 'record' JSON document when a block is passed" do
@@ -181,7 +182,7 @@ describe "Tropo" do
                                            say     :value => 'Please say your account number'
                                            choices :value => '[5 DIGITS]'
                                          end
-    JSON.parse(response).should == {"tropo"=>[{"record"=>{"name"=>"foo", "say"=>[{"value"=>"Please say your account number"}], "beep"=>true, "url"=>"http://sendme.com/tropo", "sendTones"=>false, "exitTone"=>"#", "choices"=>{"value"=>"[5 DIGITS]"}}}]}
+    JSON.parse(response).should == {"tropo"=>[{"record"=>{"name"=>"foo", "say"=>[{"value"=>"Please say your account number"}], "beep"=>true, "url"=>"http://sendme.com/tropo", "SendTones"=>false, "ExitTone"=>"#", "choices"=>{"value"=>"[5 DIGITS]"}}}]}
   end
   
   it "should generate an error if an 'record' is passed without a 'name' parameter" do
@@ -380,7 +381,7 @@ describe "Tropo" do
                      say     :value => 'Please say your account number'
                      choices :value => '[5 DIGITS]'
                    end
-    JSON.parse(tropo.response).should == {"tropo"=>[{"say"=>[{"value"=>"Welcome to the app"}]}, {"on"=>{"event"=>"hangup", "next"=>"/hangup.json"}}, {"record"=>{"name"=>"foo", "say"=>[{"value"=>"Please say your account number"}], "beep"=>true, "url"=>"http://sendme.com/tropo", "sendTones"=>false, "exitTone"=>"#", "choices"=>{"value"=>"[5 DIGITS]"}}}]}
+    JSON.parse(tropo.response).should == {"tropo"=>[{"say"=>[{"value"=>"Welcome to the app"}]}, {"on"=>{"event"=>"hangup", "next"=>"/hangup.json"}}, {"record"=>{"name"=>"foo", "say"=>[{"value"=>"Please say your account number"}], "beep"=>true, "url"=>"http://sendme.com/tropo", "SendTones"=>false, "ExitTone"=>"#", "choices"=>{"value"=>"[5 DIGITS]"}}}]}
   end
   
   it "should allow you to reset the object to a fresh response after building a response first" do
@@ -395,7 +396,7 @@ describe "Tropo" do
                      say     :value => 'Please say your account number'
                      choices :value => '[5 DIGITS]'
                    end
-    JSON.parse(tropo.response).should == {"tropo"=>[{"say"=>[{"value"=>"Welcome to the app"}]}, {"on"=>{"event"=>"hangup", "next"=>"/hangup.json"}}, {"record"=>{"name"=>"foo", "say"=>[{"value"=>"Please say your account number"}], "beep"=>true, "url"=>"http://sendme.com/tropo", "sendTones"=>false, "exitTone"=>"#", "choices"=>{"value"=>"[5 DIGITS]"}}}]}
+    JSON.parse(tropo.response).should == {"tropo"=>[{"say"=>[{"value"=>"Welcome to the app"}]}, {"on"=>{"event"=>"hangup", "next"=>"/hangup.json"}}, {"record"=>{"name"=>"foo", "say"=>[{"value"=>"Please say your account number"}], "beep"=>true, "url"=>"http://sendme.com/tropo", "SendTones"=>false, "ExitTone"=>"#", "choices"=>{"value"=>"[5 DIGITS]"}}}]}
     tropo.reset
     tropo.response.should == "{\"tropo\":[]}"
   end
@@ -411,7 +412,7 @@ describe "Tropo" do
     hash = Tropo::Generator.parse(json_result)
     hash.should == {:result=>{:call_state=>"ANSWERED", :complete=>true, :actions=>{:zip=>{:utterance=>"1 2 3 4 5", :attempts=>1, :interpretation=>"12345", :confidence=>100, :disposition=>"SUCCESS"}}, :session_id=>"CCFD9C86-1DD1-11B2-B76D-B9B253E4B7FB@161.253.55.20", :session_duration=>2, :error=>nil, :sequence=>1}}
   end
-  
+
   it "should generate valid JSON when a startRecording is used" do
     t = Tropo::Generator.new
     t.on :event => 'error', :next => '/error.json' # For fatal programming errors. Log some details so we can fix it
